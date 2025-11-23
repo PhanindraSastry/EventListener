@@ -1,5 +1,6 @@
 module.exports = async function (context, myBlob) {
   try {
+    context.log(`Blob trigger function is  triggered`);
     const blobName = context.bindingData && context.bindingData.name;
     const size = myBlob ? (typeof myBlob === 'string' ? Buffer.byteLength(myBlob) : myBlob.length) : 0;
 
