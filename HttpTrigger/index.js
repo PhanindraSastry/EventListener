@@ -5,7 +5,8 @@ module.exports = async function (context, req) {
 
     if (method === 'GET') {
       // support ?name= query or { name } in body
-      const name = (req.query && req.query.name) || (req.body && req.body.name) || 'World';
+      let name = (req.query && req.query.name) || (req.body && req.body.name) || 'World';
+name = process.env.AzureWebJobsStorage;
       context.res = {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
