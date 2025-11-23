@@ -4,7 +4,14 @@
       "name": "myBlob",
       "type": "blobTrigger",
       "direction": "in",
-      "path": "samples-workitems/{name}",
+      "path": "samples-workitems/inbound/{name}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "processedBlob",
+      "type": "blob",
+      "direction": "out",
+      "path": "samples-workitems/processed/{name}.processed.json",
       "connection": "AzureWebJobsStorage"
     }
   ],
