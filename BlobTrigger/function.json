@@ -4,7 +4,7 @@
       "name": "myBlob",
       "type": "blobTrigger",
       "direction": "in",
-      "path": "samples-workitems/inbound",
+      "path": "samples-workitems/{name}",
       "connection": "AzureWebJobsStorage"
     }
   ],
