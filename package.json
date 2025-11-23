@@ -1,24 +1,18 @@
 {
-  "name": "eventlistener",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/PhanindraSastry/EventListener#readme",
-  "bugs": {
-    "url": "https://github.com/PhanindraSastry/EventListener/issues"
+  "name": "azure-functions-http-nodejs",
+  "version": "0.1.0",
+  "description": "A simple Azure Functions HTTP trigger implemented in Node.js",
+  "main": "./HttpTrigger/index.js",
+  "engines": {
+    "node": ">=18"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PhanindraSastry/EventListener.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "func start",
+    "start:prod": "node ./HttpTrigger/index.js",
+    "lint": "eslint . --ext .js"
   },
-  "dependencies": {
-    "express": "^5.1.0"
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.0.0"
   }
 }
